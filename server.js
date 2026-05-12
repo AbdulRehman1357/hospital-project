@@ -49,7 +49,7 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // MySQL Connection Pool
-let pool;
+// let pool;
 
 // Simple JWT-like token verification
 function verifyToken(req, res, next) {
