@@ -6,9 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 // const PORT = 3001;
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+
 
 // Admin credentials (in production, use a database)
 const ADMIN_USERNAME = 'admin';
@@ -352,6 +350,10 @@ app.delete('/api/appointments/:id', verifyToken, async (req, res) => {
         console.error('Error deleting appointment:', error);
         res.status(500).json({ error: 'Error deleting appointment' });
     }
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
 
 // Start server
