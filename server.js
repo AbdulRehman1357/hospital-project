@@ -40,8 +40,7 @@ const pool = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0
-}).promise(); // Using .promise() makes the code cleaner
-
+}); // Removed .promise() here because 'mysql2/promise' handles it
 // Middleware
 app.use(cors());
 app.use(bodyParser.json({ limit: '50mb' }));
