@@ -16,7 +16,19 @@ const ADMIN_PASSWORD = 'admin123';
 const SECRET_KEY = 'your-secret-key-change-this-in-production';
 
 
-const db = mysql.createConnection({
+// const db = mysql.createConnection({
+//   host: process.env.DB_HOST,
+//   user: process.env.DB_USER,
+//   password: process.env.DB_PASSWORD,
+//   database: process.env.DB_NAME,
+//   port: process.env.DB_PORT,
+//   ssl: {
+//     rejectUnauthorized: false
+//   }
+// });
+const path = require('path');
+// Use createPool instead of createConnection
+const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
@@ -24,10 +36,11 @@ const db = mysql.createConnection({
   port: process.env.DB_PORT,
   ssl: {
     rejectUnauthorized: false
-  }
-});
-const path = require('path');
-
+  },
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+}).promise(); // Using .promise() makes the code cleaner
 
 // Middleware
 app.use(cors());
