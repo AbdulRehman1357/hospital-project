@@ -1,4 +1,7 @@
-const API_URL = 'http://localhost:3001/api';
+// Add this at the very top of script.js
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://localhost:3001/api' 
+    : 'https://hospital-project-buhm.onrender.com/api';
 
 // Load doctors on page load
 document.addEventListener('DOMContentLoaded', loadDoctors);

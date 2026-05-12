@@ -1,9 +1,11 @@
 const express = require('express');
 const mysql = require('mysql2/promise');
+
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const app = express();
+
 // const PORT = 3001;
 const PORT = process.env.PORT || 3001;
 
@@ -12,6 +14,19 @@ const PORT = process.env.PORT || 3001;
 const ADMIN_USERNAME = 'admin';
 const ADMIN_PASSWORD = 'admin123';
 const SECRET_KEY = 'your-secret-key-change-this-in-production';
+
+
+// const db = mysql.createConnection({
+//   host: process.env.DB_HOST,
+//   user: process.env.DB_USER,
+//   password: process.env.DB_PASSWORD,
+//   database: process.env.DB_NAME,
+//   port: process.env.DB_PORT,
+//   ssl: {
+//     rejectUnauthorized: false
+//   }
+// });
+
 
 // Middleware
 app.use(cors());
@@ -298,6 +313,9 @@ app.post('/api/appointments', async (req, res) => {
         console.error('Error creating appointment:', error);
         res.status(500).json({ error: 'Error creating appointment' });
     }
+});
+app.get('/', (req, res) => {
+    res.send('Hospital System API is Live and Running!');
 });
 
 // Get all appointments
