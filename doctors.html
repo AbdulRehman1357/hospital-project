@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellConnect - Our Doctors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="top-header-left">
+                <span><i class="fas fa-envelope"></i> contact@wellconnect.com</span>
+                <span><i class="fas fa-phone"></i> +1 5589 55 5488</span>
+            </div>
+            <div class="top-header-right">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">WellConnect</div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="doctors.html" class="active">Doctors</a></li>
+                        <li><a href="appointments.html">Appointments</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="nav-buttons">
+                        <a href="login.html" class="btn-login-nav">Admin Login</a>
+                        <a href="appointments.html" class="btn-appointment">Make an Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Doctors Section -->
+    <section class="doctors">
+        <h2>Meet Our Doctors</h2>
+        <div class="doctors-grid" id="doctorsGrid">
+            <div style="text-align: center; padding: 2rem; grid-column: 1/-1;">
+                <i class="fas fa-spinner fa-spin"></i> Loading doctors...
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 WellConnect. All rights reserved.</p>
+        <p>Your health is our priority. Book your appointment today!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

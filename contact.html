@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellConnect - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="top-header-left">
+                <span><i class="fas fa-envelope"></i> contact@wellconnect.com</span>
+                <span><i class="fas fa-phone"></i> +1 5589 55 5488</span>
+            </div>
+            <div class="top-header-right">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">WellConnect</div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="appointments.html">Appointments</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                    <div class="nav-buttons">
+                        <a href="login.html" class="btn-login-nav">Admin Login</a>
+                        <a href="appointments.html" class="btn-appointment">Make an Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>📍 Address</h3>
+                <p>
+                    WellConnect Medical Center<br>
+                    123 Healthcare Street<br>
+                    Medical City, MC 12345
+                </p>
+            </div>
+
+            <div class="contact-info">
+                <h3>📞 Phone</h3>
+                <p>
+                    Main: (555) 123-4567<br>
+                    Emergency: (555) 987-6543<br>
+                    Fax: (555) 123-4568
+                </p>
+            </div>
+
+            <div class="contact-info">
+                <h3>✉️ Email</h3>
+                <p>
+                    Info: info@wellconnect.com<br>
+                    Support: support@wellconnect.com<br>
+                    Appointments: book@wellconnect.com
+                </p>
+            </div>
+
+            <div class="contact-info">
+                <h3>⏰ Hours</h3>
+                <p>
+                    Monday - Friday: 9:00 AM - 6:00 PM<br>
+                    Saturday: 10:00 AM - 4:00 PM<br>
+                    Sunday: Closed
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <h2>Send us a Message</h2>
+        <form class="contact-form" onsubmit="handleContactForm(event)">
+            <div class="form-group">
+                <label for="contact-name">Your Name *</label>
+                <input type="text" id="contact-name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact-email">Email Address *</label>
+                <input type="email" id="contact-email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="contact-subject">Subject *</label>
+                <input type="text" id="contact-subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact-message">Message *</label>
+                <textarea id="contact-message" name="message" required placeholder="Your message here..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Map or Location -->
+    <section class="location-section">
+        <h2>Find Us</h2>
+        <div class="location-info">
+            <p>We are conveniently located in the heart of Medical City, easily accessible by public transportation and ample parking available.</p>
+            <p>Visit us at our medical center or use our online appointment booking system from the comfort of your home.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 WellConnect. All rights reserved.</p>
+        <p>Your health is our priority. Book your appointment today!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

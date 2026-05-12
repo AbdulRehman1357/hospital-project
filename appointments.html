@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellConnect - Book Appointment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="top-header-left">
+                <span><i class="fas fa-envelope"></i> contact@wellconnect.com</span>
+                <span><i class="fas fa-phone"></i> +1 5589 55 5488</span>
+            </div>
+            <div class="top-header-right">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">WellConnect</div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="appointments.html" class="active">Appointments</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="nav-buttons">
+                        <a href="login.html" class="btn-login-nav">Admin Login</a>
+                        <a href="appointments.html" class="btn-appointment">Make an Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Appointment Section -->
+    <section class="appointments">
+        <h2>Book Your Appointment</h2>
+        <form class="appointment-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+                <label for="fullname">Full Name *</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="doctor">Select Doctor *</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="">-- Choose a Doctor --</option>
+                    <option value="1">John Smith - General Practitioner</option>
+                    <option value="2">Sarah Johnson - Cardiologist</option>
+                    <option value="3">Michael Brown - Pediatrician</option>
+                    <option value="4">Emily Davis - Dermatologist</option>
+                    <option value="5">Robert Wilson - Orthopedic Surgeon</option>
+                    <option value="6">Lisa Anderson - Dentist</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Appointment Date *</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Appointment Time *</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message / Symptoms</label>
+                <textarea id="message" name="message" placeholder="Describe your symptoms or any additional information..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Confirm Appointment</button>
+        </form>
+    </section>
+
+    <!-- How to Book Section -->
+    <section class="how-to-book">
+        <h2>How to Book an Appointment</h2>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Select a Doctor</h3>
+                <p>Choose from our network of experienced and qualified doctors across various specialties.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Choose Date & Time</h3>
+                <p>Select a convenient date and time slot that works best for your schedule.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Fill Your Details</h3>
+                <p>Provide your personal and health information to help us serve you better.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Confirm Booking</h3>
+                <p>Receive a confirmation email with all the details and appointment ID.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 WellConnect. All rights reserved.</p>
+        <p>Your health is our priority. Book your appointment today!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
