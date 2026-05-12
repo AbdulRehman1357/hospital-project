@@ -314,9 +314,9 @@ app.post('/api/appointments', async (req, res) => {
         res.status(500).json({ error: 'Error creating appointment' });
     }
 });
-app.get('/', (req, res) => {
-    res.send('Hospital System API is Live and Running!');
-});
+// app.get('/', (req, res) => {
+//     res.send('Hospital System API is Live and Running!');
+// });
 
 // Get all appointments
 app.get('/api/appointments', verifyToken, async (req, res) => {
