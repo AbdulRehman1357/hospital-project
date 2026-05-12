@@ -26,6 +26,7 @@ const SECRET_KEY = 'your-secret-key-change-this-in-production';
 //     rejectUnauthorized: false
 //   }
 // });
+const path = require('path');
 
 
 // Middleware
@@ -159,6 +160,10 @@ app.post('/api/login', (req, res) => {
         res.status(401).json({ message: 'Invalid credentials' });
     }
 });
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 
 // Get all doctors
 app.get('/api/doctors', async (req, res) => {
