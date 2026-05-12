@@ -1,10 +1,15 @@
+const path = require('path'); // 1. Define 'path' first
+require('dotenv').config({ path: path.join(__dirname, '.env') }); // 2. Now use it
+
 const express = require('express');
 const mysql = require('mysql2/promise');
-
 const cors = require('cors');
-const bodyParser = require('body-parser');
+
+// Debug check: This should now show your actual Aiven Host URL in the terminal
+console.log("Database Host:", process.env.DB_HOST);
 
 const app = express();
+// ... rest of your code
 
 // const PORT = 3001;
 const PORT = process.env.PORT || 3001;
@@ -16,17 +21,7 @@ const ADMIN_PASSWORD = 'admin123';
 const SECRET_KEY = 'your-secret-key-change-this-in-production';
 
 
-// const db = mysql.createConnection({
-//   host: process.env.DB_HOST,
-//   user: process.env.DB_USER,
-//   password: process.env.DB_PASSWORD,
-//   database: process.env.DB_NAME,
-//   port: process.env.DB_PORT,
-//   ssl: {
-//     rejectUnauthorized: false
-//   }
-// });
-const path = require('path');
+
 // Use createPool instead of createConnection
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
@@ -43,8 +38,8 @@ const pool = mysql.createPool({
 }); // Removed .promise() here because 'mysql2/promise' handles it
 // Middleware
 app.use(cors());
-app.use(bodyParser.json({ limit: '50mb' }));
-app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // MySQL Connection Pool
