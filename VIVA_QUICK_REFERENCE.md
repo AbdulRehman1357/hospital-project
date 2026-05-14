@@ -96,7 +96,7 @@ app.listen(PORT, () => {
 
 ---
 
-## 💾 DATABASE (MySQL Connection Pool)
+## 💾 DATABASE (MySQL2 Connection Pool)
 
 ```javascript
 const pool = mysql.createPool({

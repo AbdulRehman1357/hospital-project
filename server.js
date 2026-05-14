@@ -136,7 +136,7 @@ async function initializeDatabase() {
             (3, 'Michael Brown', 'Pediatrician', 4.7),
             (4, 'Emily Davis', 'Dermatologist', 4.6),
             (5, 'Robert Wilson', 'Orthopedic Surgeon', 4.9),
-            (6, 'Lisa Anderson', 'Dentist', 4.5)
+            (6, 'Zulekha Anderson', 'Dentist', 4.5)
         `);
 
         poolConnection.release();
