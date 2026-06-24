@@ -486,7 +486,7 @@ async function deleteDoctor(doctorId) {
 function logout() {
     localStorage.removeItem('adminToken');
     localStorage.removeItem('adminName');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 }
 
 function formatDate(dateString) {
